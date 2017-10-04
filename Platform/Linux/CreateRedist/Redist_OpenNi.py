@@ -192,6 +192,8 @@ else:
     MAKE_ARGS = ''
 
 MAKE_ARGS += ' -j' + calc_jobs_number()
+MAKE_ARGS += ' GLUT_SUPPORTED=0 GLES_SUPPORTED=0 '
+
 
 if ostype == "Darwin":
     TARGET = "MacOSX"
